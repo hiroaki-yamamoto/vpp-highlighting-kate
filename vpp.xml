@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+<language   name="VDM++" section="Sources"
+            version="1.00" kateversion="2.4"
+            indenter="cppstyle"
+            extensions="*.vpp;*.vxx"
+            mimetyle="text/x-vpp;text/x-vxx"
+            priority="5">
+                <highlighting>
+                    <list name="histories">
+                        <item> #act </item>
+                        <item> #active </item>
+                        <item> #fin </item>
+                        <item> #req </item>
+                        <item> #waiting </item>
+                    </list>
+                    <list name="keywords">
+                        <item> RESULT </item>
+                        <item> abs </item>
+                        <item> all </item>
+                        <item> always </item>
+                        <item> and </item>
+                        <item> as </item>
+                        <item> async </item>
+                        <item> atomic </item>
+                        <item> be </item>
+                        <item> break </item>
+                        <item> by </item>
+                        <item> card </item>
+                        <item> cases </item>
+                        <item> class </item>
+                        <item> comp </item>
+                        <item> compose </item>
+                        <item> conc </item>
+                        <item> cycles </item>
+                        <item> dcl </item>
+                        <item> def </item>
+                        <item> definitions </item>
+                        <item> dinter </item>
+                        <item> div </item>
+                        <item> dlclass </item>
+                        <item> dlmodule </item>
+                        <item> do </item>
+                        <item> dom </item>
+                        <item> dunion </item>
+                        <item> duration </item>
+                        <item> elems </item>
+                        <item> else </item>
+                        <item> elseif </item>
+                        <item> end </item>
+                        <item> error </item>
+                        <item> errs </item>
+                        <item> exists </item>
+                        <item> exists1 </item>
+                        <item> exit </item>
+                        <item> export </item>
+                        <item> exports </item>
+                        <item> ext </item>
+                        <item> extern </item>
+                        <item> false </item>
+                        <item> floor </item>
+                        <item> for </item>
+                        <item> forall </item>
+                        <item> from </item>
+                        <item> functions </item>
+                        <item> hd </item>
+                        <item> if </item>
+                        <item> imports </item>
+                        <item> in </item>
+                        <item> inds </item>
+                        <item> init </item>
+                        <item> inmap </item>
+                        <item> instance </item>
+                        <item> inter </item>
+                        <item> inv </item>
+                        <item> inverse </item>
+                        <item> iota </item>
+                        <item> is_ </item>
+                        <item> is_bool </item>
+                        <item> is_char </item>
+                        <item> is_int </item>
+                        <item> is_nat </item>
+                        <item> is_nat1 </item>
+                        <item> is_rat </item>
+                        <item> is_real </item>
+                        <item> is_token </item>
+                        <item> isofbaseclass </item>
+                        <item> isofclass </item>
+                        <item> lambda </item>
+                        <item> len </item>
+                        <item> let </item>
+                        <item> map </item>
+                        <item> measure </item>
+                        <item> merge </item>
+                        <item> mg </item>
+                        <item> mk_ </item>
+                        <item> mod </item>
+                        <item> module </item>
+                        <item> mu </item>
+                        <item> munion </item>
+                        <item> mutex </item>
+                        <item> new </item>
+                        <item> nil </item>
+                        <item> not </item>
+                        <item> of </item>
+                        <item> operations </item>
+                        <item> or </item>
+                        <item> others </item>
+                        <item> per </item>
+                        <item> periodic </item>
+                        <item> post </item>
+                        <item> power </item>
+                        <item> pre </item>
+                        <item> private </item>
+                        <item> protected </item>
+                        <item> psubset </item>
+                        <item> public </item>
+                        <item> rat </item>
+                        <item> rd </item>
+                        <item> rem </item>
+                        <item> renamed </item>
+                        <item> return </item>
+                        <item> reverse </item>
+                        <item> rng </item>
+                        <item> samebaseclass </item>
+                        <item> sameclass </item>
+                        <item> self </item>
+                        <item> seq </item>
+                        <item> seq1 </item>
+                        <item> set </item>
+                        <item> sizeof </item>
+                        <item> skip </item>
+                        <item> st </item>
+                        <item> start </item>
+                        <item> startlist </item>
+                        <item> state </item>
+                        <item> static </item>
+                        <item> struct </item>
+                        <item> subset </item>
+                        <item> sync </item>
+                        <item> system </item>
+                        <item> then </item>
+                        <item> thread </item>
+                        <item> threadid </item>
+                        <item> time </item>
+                        <item> tixe </item>
+                        <item> tl </item>
+                        <item> to </item>
+                        <item> traces </item>
+                        <item> trap </item>
+                        <item> true </item>
+                        <item> types </item>
+                        <item> undefined </item>
+                        <item> union </item>
+                        <item> uselib </item>
+                        <item> values </item>
+                        <item> variables </item>
+                        <item> while </item>
+                        <item> with </item>
+                        <item> wr </item>
+                    </list>
+                    <list name="types">
+                        <item> bool </item>
+                        <item> nat1 </item>
+                        <item> nat </item>
+                        <item> int </item>
+                        <item> real </item>
+                        <item> char </item>
+                        <item> token </item>
+                    </list>
+                <contexts>
+                    <context name="DetectKeywordsAndTypes" attribute="Normal Text" lineEndContext="#stay">
+                        <DetectSpaces />
+                        <!--This is for "is not yet specified" and "is subclass responsibility".-->
+                        <RegExpr String="is (not yet specified|subclass responsibility)" attribute="Keywords"/>
+                        <keyword attribute="Keywords" String="keywords" />
+                        <keyword attribute="Histories" String="histories" />
+                        <keyword attribute="Types" String="types" />
+                        <Detect2Chars char='-' char1='-' attribute="Comment" context="SingleComment" />
+                        <Detect2Chars char='/' char1='*' attribute="Comment" context="MultiComment" beginRegion="Comment"/>
+                        <DetectChar char='"' attribute="String" context="String" />
+                        <HlCChar attribute="Character" />
+                        <HlCHex attribute="Hex" />
+                        <Float attribute="Decimal" />
+                        <Int attribute="Decimal" />
+                    </context>
+                    
+                    <context name="SingleComment" attribute="Comment" lineEndContext="#pop" />
+                    <context name="MultiComment" attribute="Comment" lineEndContext="#stay">
+                        <Detect2Chars char='*' char1='/' context="#pop" attribute="Comment" endRegion="Comment" />
+                    </context>
+                    <context name="String" attribute="String" lineEndContext="#pop" beginRegion="String">
+                        <DetectChar char='"' attribute="String" context="#pop" endRegion="String" />
+                    </context>
+                </contexts>
+                <itemDatas>
+                    <itemData name="Error" defStyleNum="dsError" spellChecking="false" />
+                    <itemData name="Histories" defStyleNum="dsOthers" spellChecking="false" />
+                    <itemData name="Normal Text" defStyleNum="dsNormal" spellChecking="false" />
+                    <itemData name="Keywords" defStyleNum="dsKeyword" spellChecking="false" />
+                    <itemData name="types" defStyleNum="dsDataType" spellChecking="false" />
+                    <itemData name="Comment" defStyleNum="dsComment" spellChecking="false" />
+                    <itemData name="Hex" defStyleNum="dsBaseN" spellChecking="false" />
+                    <itemData name="Decimal" defStyleNum="dsDecVal" spellChecking="false" />
+                    <itemData name="String" defStyleNum="dsString" />
+                    <itemData name="Character" defStyleNum="dsCharacter" />
+                </itemDatas>
+                </highlighting>
+                <general>
+                    <comments>
+                        <comment name="singleLine" start="--" />
+                        <comment name="multiLine" region="Comment" start="/*" end="*/" />
+                    </comments>
+                    <keywords casesensitive="1" />
+                </general>
+</language>

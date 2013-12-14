@@ -1,0 +1,23 @@
+README
+======
+What These Scripts?
+    These scripts are Kate Syntax Highlighting File for VDM++
+
+What VDM++?
+    It is a one of Fromal Method developed by IBM. For details, look at Wikipedia and search "Vienna Development Method".
+
+How to Install
+    If you are using Arch Linux, run makepkg on the directory. this scripts include PKGBUILD.
+    If not, create a packaging script, and install it with your PackageManager. 
+    The installation process is very simple; My PKGBUILD only installs vpp.xml into $(kde4-config --prefix)/share/apps/katepart/syntax/ .
+
+License
+    The entire scripts that are in here (i.e. vpp.xml, PKGBUILD, and this file) are licensed under the terms of the latest version on GPL.
+
+If you notice unexpected behavior, please let me know.
+
+============================
+Hiroaki Yamamoto
+http://hysoftware.net
+adminAtSignhysoftware.net
+============================
